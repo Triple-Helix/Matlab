@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="630"
+   name=""
+   committed-date="2010-01-29T22:14:21.513282Z"
+   url="svn+ssh://mnima@metal.isr.umd.edu/home/svn/baphy/SoundObjects/@SoundObject"
+   last-author="svd"
+   kind="dir"
+   uuid="cece0106-8904-0410-87f6-d6743dabd6d7"
+   repos="svn+ssh://mnima@metal.isr.umd.edu/home/svn/baphy"
+   revision="633"/>
+<entry
+   committed-rev="622"
+   name="waveform.m"
+   text-time="2009-10-02T19:16:46.106125Z"
+   committed-date="2009-12-15T13:14:40.007734Z"
+   checksum="85ec71160740fa42ff5036a75e386982"
+   last-author="svd"
+   kind="file"
+   prop-time="2010-02-24T17:46:30.140625Z"/>
+<entry
+   committed-rev="159"
+   name="set.m"
+   text-time="2006-04-27T06:15:56.468750Z"
+   committed-date="2006-04-27T13:31:45.850299Z"
+   checksum="0fad8b208f20b587880720b318a8a313"
+   last-author="mnima"
+   kind="file"
+   prop-time="2006-04-26T17:03:36.140625Z"/>
+<entry
+   committed-rev="26"
+   name="ObjUpdate.m"
+   text-time="2006-04-26T17:03:36.296875Z"
+   committed-date="2005-11-20T23:08:09.486263Z"
+   checksum="73a10fad3e895bd35bddb7a35bd0cc33"
+   last-author="svd"
+   kind="file"
+   prop-time="2006-04-26T17:03:36.171875Z"/>
+<entry
+   committed-rev="63"
+   name="SoundObject.m"
+   text-time="2006-04-26T17:03:36.296875Z"
+   committed-date="2005-12-01T01:46:44.453073Z"
+   checksum="528c380b3c28d5641cbc12a715180bb9"
+   last-author="mnima"
+   kind="file"
+   prop-time="2006-04-26T17:03:36.187500Z"/>
+<entry
+   committed-rev="159"
+   name="get.m"
+   text-time="2006-04-27T06:15:48.093750Z"
+   committed-date="2006-04-27T13:31:45.850299Z"
+   checksum="667456103bf24e5acc1ef33b664cd808"
+   last-author="mnima"
+   kind="file"
+   prop-time="2006-04-26T17:03:36.218750Z"/>
+<entry
+   name="private"
+   kind="dir"/>
+<entry
+   committed-rev="630"
+   name="audspectrogram.m"
+   text-time="2009-08-28T18:43:27.765625Z"
+   committed-date="2010-01-29T22:14:21.513282Z"
+   checksum="ae6012d8f1223ff8074fdf84f39e75a5"
+   last-author="svd"
+   kind="file"
+   prop-time="2010-02-24T17:46:30.296875Z"/>
+<entry
+   committed-rev="164"
+   name="ObjLoadSaveDefaults.m"
+   text-time="2006-04-28T04:22:20.500000Z"
+   committed-date="2006-04-28T02:20:59.417206Z"
+   checksum="dd6e88339812d5150667e1457aa436e5"
+   last-author="mnima"
+   kind="file"
+   prop-time="2006-04-28T04:22:20.468750Z"/>
+<entry
+   committed-rev="518"
+   name="audcorticogram.m"
+   text-time="2008-03-12T18:55:44.096500Z"
+   committed-date="2008-07-10T18:24:21.709626Z"
+   checksum="78ff644a78caa892fff3c31a19c849c5"
+   last-author="mnima"
+   kind="file"/>
+</wc-entries>

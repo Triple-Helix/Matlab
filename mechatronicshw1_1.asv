@@ -1,0 +1,16 @@
+L1 = 1;
+L2 = 1;
+tau = [0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1.0];
+x = 1+tau/2;
+y = 1+tau/2;
+x2 = x.*x;
+y2 = y.*y;
+disp((x2+y2-L1^2-L2^2)/(2*L1*L2));
+theta2 = arccos((x2+y2-L1^2-L2^2)/(2*L1*L2));
+
+%Let cos(theta1) = (1-t^2)/(1+t^2)
+%Let sin(theta1) = (2t)/(1+t^2)
+%t = (-sqrt(L1^2+2*L1*L2*cos(theta2)+L2^2*sin(theta2)^2+L2^2*cos(theta2)^2-x^2)+L1+L2*cos(theta2))/(x-L2*sin(theta2));
+
+phi = atan2(y,x);
+xi = atan2(L2sin(theta2),L1+L2*cos(theta2));

@@ -1,0 +1,12 @@
+%Part B
+nd = 0;
+pi = 3.1415926535;
+n = [-100:1:100];
+hbp1 = 2.*((sin(pi./16.*(n-nd)).*cos(3.*pi.*n./16))./(pi.*(n-nd)));
+hbp2 = 2.*((sin(pi./8.*(n-nd)).*cos(13.*pi.*n./16))./(pi.*(n-nd)));
+hbp = hbp1 + hbp2;
+stem(n,hbp,'fill');
+
+%Part C
+h1 = exp(-i.*w.*nd);
+h1 = exp(-i.*w.*nd);

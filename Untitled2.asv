@@ -1,0 +1,77 @@
+clear all
+%Initialize values
+a1 = 1;
+a2 = 1;
+b1 = 1; 
+b2 = 1;
+r = 1; 
+w = 1;
+vectorX0 = [0;0;0]; %Initial Position
+vectorXd = [1;1;pi/4]; %Final Position
+
+%Create t array
+t = 0:.01:1;
+t2 = t.*t;
+deltaT = .01;
+
+%Initialize Vector Arrays Paramteters
+vectorA = [a1;a2];
+vectorB = [b1;b2];
+vectorC = [vectorA' vectorB']';
+
+%Initial vectorXc
+vectorXc = vectorX0;
+
+%While loop start
+
+    nextX = vectorX0;
+    vectorXc = vectorX0;
+    
+    %Initialize Phi and d(Phi)/dt
+    for i=1:100
+        vectorPhi(:,i) = [0;0];
+        dVectorPhi(:,i) = [0;0];
+    end
+    %Calculate Phi and d(Phi)/dt
+    for i=1:100
+        vectorPhi(:,i) = vectorA*t(i) + vectorB*t2(i);
+        dVectorPhi(:,i) = vectorA + 2.*vectorB*t(i);
+    end
+    
+    %dXVector Calculations
+    for i=1:100
+        A = [r/2*cos(nextX(3)) r/2*cos(nextX(3));
+             r/2*sin(nextX(3)) r/2*sin(nextX(3));
+             -r/w r/w];
+        dVectorX = A*dVectorPhi(:,i);
+        nextX = nextX + deltaT.*dVectorX;
+    end
+    vectorXc = vectorX0 + nextX;
+    
+    %Plot trajectories
+elements = length(xcf);
+figure
+hold on
+for i = 1:floor((elements)/20):elements
+      xf = xcf(:, :, i);
+      df = dxf(:, :, i);
+      xend = xf(1) + 0.1*sin(xf(3));
+      yend = xf(2) + 0.1*cos(xf(3));
+      x = [xf(1), xend];
+      y = [xf(2), yend];
+      plot(x, y, '-');
+      text(xf(1), xf(2), ['(', num2str(xf(1)), ',', num2str(xf(2)), ',', num2str(xf(3)), ')'], 'HorizontalAlignment', 'right');
+end
+xf = xcf(:,:, elements);
+df = dxf(:, :, elements);
+xend = xf(1) + 0.1*sin(xf(3));
+yend = xf(2) + 0.1*cos(xf(3));
+x = [xf(1), xend];
+y = [xf(2), yend];
+plot(x, y, '-');
+text(xf(1), xf(2), ['(', num2str(xf(1)), ',', num2str(xf(2)), ',', num2str(xf(3)), ')'], 'HorizontalAlignment', 'right');
+%Display final results
+xf
+normalize = norm(xd-xf)
+c
+hold off
